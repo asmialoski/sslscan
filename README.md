@@ -5,6 +5,9 @@ Esse script foi criado a partir da seguinte demanda: descobrir em quais URLs um 
 Basicamente, o script recebe uma lista das URLs e retorna com o certificado que está sendo utilizado em cada URL.
 
 ## Execução:
+ ### Resultado:
+    O script irá gerar um arquivo chamado urls_certinfo, o arquivo irá conter os seguintes campos separados por ";" :
+      URL: inform
   ### scr
     .\sslscan.sh urls.txt
 
