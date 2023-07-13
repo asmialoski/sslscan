@@ -7,10 +7,10 @@ Basicamente, o script recebe uma lista das URLs e retorna com o certificado que 
 ## Execução:
 .\sslscan.sh urls.txt
 
-Mas como descobrir quais são as URLs?
+##Mas como descobrir quais são as URLs?
   Minha recomendação é exportar a lista dos registros da Zona de DNS.
 
-Exemplo:
+##Exemplo:
   Vamos supor que eu tenha um certificado wildcard *.smialoski.com.br e preciso atualizar ele pois está vencendo.
   Porém, eu não sei em quais URLs ele está sendo utilizado.
   Então o procedimento seria o seguinte:
@@ -18,7 +18,7 @@ Exemplo:
     2. Filtrar os registros da Zona de DNS, o objetivo é deixar a menor quantidade de URLs (excluir registros de contas de computador, por exemplo);
     3. Executar o script passando essa lista de URLs como parâmetro.
 
-  Resultado:
+  ###Resultado:
     O script irá gerar um arquivo chamado urls_certinfo, o arquivo irá conter os seguintes campos separados por ";" :
       URL: informando a URL que está utilizando o certificado;
       Porta: informando a porta que está utilizando o certificado;
