@@ -5,7 +5,6 @@
   Basicamente, o script recebe uma lista das URLs e retorna com o certificado que está sendo utilizado em cada URL.
 
 ## Execução:
- ### Rodar:
     .\sslscan.sh urls.txt
 
 ## Mas como descobrir quais são as URLs?
