@@ -6,9 +6,6 @@ Basicamente, o script recebe uma lista das URLs e retorna com o certificado que 
 
 ## Execução:
  ### Resultado:
-    O script irá gerar um arquivo chamado urls_certinfo, o arquivo irá conter os seguintes campos separados por ";" :
-      URL: inform
-  ### scr
     .\sslscan.sh urls.txt
 
 ## Mas como descobrir quais são as URLs?
