@@ -1,8 +1,8 @@
 # SSL SCAN
 Descubra as URLs onde seu certificado está sendo utilizado.
 
-Esse script foi criado a partir da seguinte demanda: descobrir em quais URLs um certificado está sendo utilizado.__
-\nBasicamente, o script recebe uma lista das URLs e retorna com o certificado que está sendo utilizado em cada URL.
+Esse script foi criado a partir da seguinte demanda: descobrir em quais URLs um certificado está sendo utilizado.  
+Basicamente, o script recebe uma lista das URLs e retorna com o certificado que está sendo utilizado em cada URL.
 
 ## Execução:
  ### Rodar:
