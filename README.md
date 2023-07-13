@@ -1,15 +1,15 @@
 # SSL SCAN
-Descubra as URLs onde seu certificado está sendo utilizado.
+  Descubra as URLs onde seu certificado está sendo utilizado.
 
-Esse script foi criado a partir da seguinte demanda: descobrir em quais URLs um certificado está sendo utilizado.  
-Basicamente, o script recebe uma lista das URLs e retorna com o certificado que está sendo utilizado em cada URL.
+  Esse script foi criado a partir da seguinte demanda: descobrir em quais URLs um certificado está sendo utilizado.  
+  Basicamente, o script recebe uma lista das URLs e retorna com o certificado que está sendo utilizado em cada URL.
 
 ## Execução:
  ### Rodar:
     .\sslscan.sh urls.txt
 
 ## Mas como descobrir quais são as URLs?
-  Minha recomendação é exportar a lista dos registros da Zona de DNS.
+    Minha recomendação é exportar a lista dos registros da Zona de DNS.
 
 ## Exemplo:
   Vamos supor que eu tenha um certificado wildcard *.smialoski.com.br e preciso atualizar ele pois está vencendo.  
