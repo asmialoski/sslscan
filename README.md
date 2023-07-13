@@ -21,10 +21,10 @@ Minha recomendação é exportar a lista dos registros da Zona de DNS.
 
   ### Resultado:
   O script irá gerar um arquivo chamado urls_certinfo, o arquivo irá conter os seguintes campos separados por ";" :  
-      URL: informando a URL que está utilizando o certificado;  
-      Porta: informando a porta que está utilizando o certificado;  
-      EndDate: informando a data de vencimento do certificado dessa URL;  
-      Subject: informando o subject do certificado, por esse campo, é possível verificar se o certificado é o wildcard ou se é um certificado para URL única.  
+      - URL: informando a URL que está utilizando o certificado;  
+      - Porta: informando a porta que está utilizando o certificado;  
+      - EndDate: informando a data de vencimento do certificado dessa URL;  
+      - Subject: informando o subject do certificado, por esse campo, é possível verificar se o certificado é o wildcard ou se é um certificado para URL única.  
 
 
 
