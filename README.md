@@ -9,7 +9,7 @@
     .\sslscan.sh urls.txt
 
 ## Mas como descobrir quais são as URLs?
-    Minha recomendação é exportar a lista dos registros da Zona de DNS.
+Minha recomendação é exportar a lista dos registros da Zona de DNS.
 
 ## Exemplo:
   Vamos supor que eu tenha um certificado wildcard *.smialoski.com.br e preciso atualizar ele pois está vencendo.  
