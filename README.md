@@ -8,7 +8,44 @@
     .\sslscan.sh urls.txt
 
 ## Mas como descobrir quais são as URLs?
-Minha recomendação é exportar a lista dos registros da Zona de DNS.
+  Minha recomendação é exportar a lista dos registros da Zona de DNS.
+  Se o servidor de DNS for Windows, segue abaixo um script em Powershell para exportar todos os registros de uma Zona:
+
+$ZoneName = "domain.com.br"
+$outFile = "C:\temp\dnsRecords.csv"
+
+$data = Get-DnsServerResourceRecord $ZoneName
+foreach ($records in $data) {
+	$data = $ZoneName
+        $data += ","
+        $data += $records.hostname;
+        $data += ","
+        $data += $RecordType = $records.recordType;
+        $data += ","
+        
+        if ($RecordType -like "PTR") {
+            $data += $records.RecordData.PtrDomainName
+        }
+        elseif ($RecordType -like "A") {
+            $data += $([system.version]($records.RecordData.ipv4address.IPAddressToString));
+        }
+        elseif ($RecordType -like "CNAME") {
+            $data += $records.RecordData.HostNameAlias;
+        }
+        elseif ($RecordType -like "NS") {
+            $data += $records.RecordData.nameserver;
+        }
+        elseif ($RecordType -like "MX") {
+            $data += $records.RecordData.MailExchange;
+        }
+        elseif ($RecordType -like "SOA") {
+            $data += $records.RecordData.PrimaryServer;
+        }
+        elseif ($RecordType -like "SRV") {
+            $data += $records.RecordData.DomainName;
+        }
+        $data | out-file -FilePath $outFile -Append
+}
 
 ## Exemplo:
   Vamos supor que eu tenha um certificado wildcard *.smialoski.com.br e preciso atualizar ele pois está vencendo.  
