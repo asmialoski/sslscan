@@ -11,8 +11,8 @@
   Minha recomendação é exportar a lista dos registros da Zona de DNS.
   Se o servidor de DNS for Windows, segue abaixo um script em Powershell para exportar todos os registros de uma Zona:
 
-$ZoneName = "domain.com.br"
-$outFile = "C:\temp\dnsRecords.csv"
+    $ZoneName = "domain.com.br"
+    $outFile = "C:\temp\dnsRecords.csv"
 
 $data = Get-DnsServerResourceRecord $ZoneName
 foreach ($records in $data) {
