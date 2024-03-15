@@ -14,8 +14,8 @@
     $ZoneName = "domain.com.br"
     $outFile = "C:\temp\dnsRecords.csv"
 
-$data = Get-DnsServerResourceRecord $ZoneName
-foreach ($records in $data) {
+    $data = Get-DnsServerResourceRecord $ZoneName
+    foreach ($records in $data) {
 	$data = $ZoneName
         $data += ","
         $data += $records.hostname;
@@ -45,7 +45,7 @@ foreach ($records in $data) {
             $data += $records.RecordData.DomainName;
         }
         $data | out-file -FilePath $outFile -Append
-}
+    }
 
 ## Exemplo:
   Vamos supor que eu tenha um certificado wildcard *.smialoski.com.br e preciso atualizar ele pois está vencendo.  
